@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "NovelWeaver Scraper Helper",
+  "version": "1.0",
+  "description": "Helper extension to bypass CORS for NovelWeaver AI",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "https://*.novelweaver.ai/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

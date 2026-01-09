@@ -1,0 +1,7 @@
+{
+  "name": "NovelWeaver AI",
+  "description": "Professional web novel translator using Gemini, featuring intelligent glossary management and context-aware pronoun mapping.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
